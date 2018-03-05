@@ -1,11 +1,18 @@
 import React from 'react';
+import PortfolioItem from './PortfolioItem';
+import portfolioData from '../data/portfolioData.js';
+
 
 const Portfolio = (props) => {
     return(
         <div className="portfolio-wrp">
-            <div className="portfolio">
-                Portfolio must be displayed here
-            </div>
+            {portfolioData.map(item => 
+                <PortfolioItem
+                    key={item.id}
+                    caption={item.caption}
+                    imgLink={process.env.PUBLIC_URL + item.url}
+                />
+            )}
         </div>
     )
 }

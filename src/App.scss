@@ -7,24 +7,20 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.content {
+  display: flex;
 }
 
-.App-header {
-  height: 150px;
-  padding: 20px;
-  color: white;
+.side-nav {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-width: 20%;
+  min-width: 30%;
 }
 
-
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.portfolio-wrp{
+  min-width: 80%;
+  max-width: 100%;
 }
