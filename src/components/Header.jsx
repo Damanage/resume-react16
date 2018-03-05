@@ -1,12 +1,12 @@
 import React from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import ToolBarLink from './ToolBarLink';
 
 const Header = (props) => {
     return(
         <div className='header-wrp'>
-            <Link to='/about' className='btn'>About</Link>
-            
-            <Link to='/portfolio' className='btn'>Portfolio</Link>
+            <ToolBarLink exact to='/' className='header-menu'>Home</ToolBarLink>
+            <ToolBarLink to='/about' className='header-menu'>About</ToolBarLink>
+            <ToolBarLink to='/portfolio' className='header-menu'>Portfolio</ToolBarLink>
             
         </div>
     )
