@@ -2,25 +2,15 @@
 @import './sass/_header.sass';
 @import './sass/_about.sass';
 @import './sass/_portfolio.sass';
+@import './sass/_home.sass';
+
 
 .App {
   text-align: center;
+  height: 100vh;
 }
 
 .content {
   display: flex;
 }
 
-.side-nav {
-  background-color: grey;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-width: 20%;
-  min-width: 30%;
-}
-
-.portfolio-wrp{
-  min-width: 80%;
-  max-width: 100%;
-}

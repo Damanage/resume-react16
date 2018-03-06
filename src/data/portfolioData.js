@@ -13,6 +13,11 @@ const portfolioData = [
         id: 3,
         url: '/img/duck.png',
         caption: 'cap three'
+    },
+    {
+        id: 4,
+        url: '/img/duck.png',
+        caption: 'cap four'
     }
 ];
 

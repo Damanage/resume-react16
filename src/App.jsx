@@ -9,8 +9,7 @@ import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
 
-//test component
-import SideNav from './components/SideNav'
+
 
 // pages components
 import NotFound from './pages/NotFound';
@@ -25,8 +24,6 @@ class App extends Component {
 
           <div className="content">
 
-            <Route path='/portfolio' component={SideNav}/>
-            
             <Switch>
               <Route exact path='/' component={Home}/>
               <Route exact path='/about' component={About}/>
