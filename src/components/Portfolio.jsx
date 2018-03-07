@@ -11,13 +11,15 @@ const Portfolio = (props) => {
             <Route path='/portfolio' component={SideNav}/>
 
             <div className="portfolio-wrp">
-                {portfolioData.map(item => 
-                    <PortfolioItem
-                        key={item.id}
-                        caption={item.caption}
-                        imgLink={process.env.PUBLIC_URL + item.url}
-                    />
-                )}
+                <div className="portfolio-item-list">
+                    {portfolioData.map(item => 
+                        <PortfolioItem
+                            key={item.id}
+                            caption={item.caption}
+                            imgLink={process.env.PUBLIC_URL + item.url}
+                        />
+                    )}
+                </div>
             </div>
 
         </div>
