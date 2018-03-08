@@ -9,7 +9,9 @@ const Home = (props) => {
                 {homeData.test}
             </div>
 
-            <NavLink to='/about' activeClassName='header-menu--active'>Next</NavLink>
+            <NavLink to='/about' className='next-btn-wrp' activeClassName='header-menu--active'>
+                <i className="material-icons next-button">arrow_forward</i>
+            </NavLink>
         </div>
     )
 }
