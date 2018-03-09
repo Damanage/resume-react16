@@ -6,7 +6,7 @@
 
 
 .App {
-  background-color: green;
+  background: linear-gradient(to bottom, #fac1c4, #fcc9c5, rgba(252, 210, 201, 0.43), rgba(252, 219, 206, 0.43), rgba(252, 227, 213, 0.14));
   position: relative;
   text-align: center;
   height: 100vh;
@@ -27,13 +27,27 @@
 //animation
 
 .fade-enter {
-  opacity: 0;
+  transform: translateX(-400px);
   z-index: 1;
 }
 
 .fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 200ms ease-in;
+  // opacity: 1;
+  transform: translateX(0px);
+  transition: transform 360ms ease-in;
+  will-change: transform;
+}
+
+.fade-exit{
+  z-index: 1;
+  transform: translateX(0);
+}
+
+.fade-exit.fade-exit-active {
+  will-change: transform opacity;
+  transform: translateX(400px);
+  opacity: 0;
+  transition: all 200ms ease-out;
 }
 
 

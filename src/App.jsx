@@ -29,7 +29,7 @@ class App extends Component {
 
               <TransitionGroup className='content-sub-wrp'>
 
-                <CSSTransition key={location.key} classNames="fade" timeout={200}>  
+                <CSSTransition key={location.key} classNames="fade" timeout={400}>  
                   <Switch location={location}>
                     <Route exact path='/' component={Home}/>
                     <Route exact path='/about' component={About}/>
