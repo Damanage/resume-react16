@@ -19,11 +19,12 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Route render={({location})=>(
+        <Route render={({location, ...props})=>(
 
           <div className="App">
-            <Header/>
-
+            
+              <Header/>
+            
 
             <div className="content">
 
