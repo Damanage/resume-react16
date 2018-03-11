@@ -8,7 +8,7 @@ class Header extends React.Component{
     render(){
         return(
             <div className='header-wrp'>
-                <ToolBarLink exact to='/' className='header-menu'>Home</ToolBarLink>
+                <ToolBarLink exact to='/home' className='header-menu'>Home</ToolBarLink>
                 <ToolBarLink to='/about' className='header-menu'>About</ToolBarLink>
                 <ToolBarLink to='/portfolio' className='header-menu'>Portfolio</ToolBarLink>
                 

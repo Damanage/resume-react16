@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { TransitionGroup, CSSTransition} from "react-transition-group";
 
 import './App.css';
 
@@ -20,17 +20,18 @@ class App extends Component {
     super(props)
 
     this.state = {
-      isMount: 0
+      isMount: false
     }
+
     this.Joe = this.Joe.bind(this);
     this.Sam = this.Sam.bind(this)
   }
   
   Joe(){
-     this.setState({isMount: 1})
+     this.setState({isMount: true})
   }
   Sam(){
-    this.setState({isMount: 0})
+    this.setState({isMount: false})
   }
 
   render() {
@@ -40,18 +41,24 @@ class App extends Component {
 
           <div className="App">
           
-            <Route exact path="/" render={() => <Redirect to="/home" />} />  
-            
-            <Header/>
-            
+            <Route exact path="/" render={() => <Redirect to="/home" />} />
 
+            
+          
+            <CSSTransition in={!this.state.isMount} key={location.key} classNames='test' timeout={500}>
+              
+              {!this.state.isMount ? <Header/>: <div></div>  }
+            </CSSTransition> 
+          
+          
+            
             <div className="content">
 
               <TransitionGroup className='tr-group'>
 
                 <CSSTransition  key={location.key} classNames="fade" timeout={1400}>  
                   <Switch location={location}>
-                    <Route exact path='/home' component={Home}/>
+                    <Route exact path='/home' render={()=><Home Sam={this.Sam} Joe={this.Joe}/>}/>
                     <Route exact path='/about' component={About}/>
                     <Route exact path='/portfolio' component={Portfolio}/>
                     <Route component={NotFound}/>
