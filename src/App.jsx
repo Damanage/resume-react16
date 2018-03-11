@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 
 import './App.css';
@@ -16,25 +16,44 @@ import Portfolio from './components/Portfolio';
 import NotFound from './pages/NotFound';
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+    this.state = {
+      isMount: 0
+    }
+    this.Joe = this.Joe.bind(this);
+    this.Sam = this.Sam.bind(this)
+  }
+  
+  Joe(){
+     this.setState({isMount: 1})
+  }
+  Sam(){
+    this.setState({isMount: 0})
+  }
+
   render() {
     return (
       <Router>
-        <Route render={({location, ...props})=>(
+        <Route render={({location})=>(
 
           <div className="App">
+          
+            <Route exact path="/" render={() => <Redirect to="/home" />} />  
             
-              <Header/>
+            <Header/>
             
 
             <div className="content">
 
-              <TransitionGroup className='content-sub-wrp'>
+              <TransitionGroup className='tr-group'>
 
-                <CSSTransition key={location.key} classNames="fade" timeout={400}>  
+                <CSSTransition  key={location.key} classNames="fade" timeout={1400}>  
                   <Switch location={location}>
-                    <Route exact path='/' component={Home}/>
+                    <Route exact path='/home' component={Home}/>
                     <Route exact path='/about' component={About}/>
-                    <Route path='/portfolio' component={Portfolio}/>
+                    <Route exact path='/portfolio' component={Portfolio}/>
                     <Route component={NotFound}/>
                   </Switch>
                 </CSSTransition>
