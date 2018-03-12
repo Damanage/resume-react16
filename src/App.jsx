@@ -23,11 +23,11 @@ class App extends Component {
       isMount: false
     }
 
-    this.statusChange = this.statusChange.bind(this)
+    this.headerStatusChange = this.headerStatusChange.bind(this)
   }
 
 
-  statusChange(){
+  headerStatusChange(){
     this.setState({isMount: !this.state.isMount});
   }
 
@@ -55,7 +55,7 @@ class App extends Component {
 
                 <CSSTransition  key={location.key} classNames="fade" timeout={1400}>  
                   <Switch location={location}>
-                    <Route exact path='/home' render={()=><Home statusChange={this.statusChange}/>}/>
+                    <Route exact path='/home' render={()=><Home headerStatusChange={this.headerStatusChange}/>}/>
                     <Route exact path='/about' component={About}/>
                     <Route exact path='/portfolio' component={Portfolio}/>
                     <Route component={NotFound}/>

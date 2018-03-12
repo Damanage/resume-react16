@@ -5,11 +5,11 @@ import homeData from '../data/homeData.js';
 class Home extends React.Component {  
 
     componentWillMount(){
-        this.props.statusChange();
+        this.props.headerStatusChange();
     }
 
     componentWillUnmount(){
-        this.props.statusChange();
+        this.props.headerStatusChange();
     }
 
     render(){
