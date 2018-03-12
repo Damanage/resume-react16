@@ -2,13 +2,14 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import homeData from '../data/homeData.js';
 
-class Home extends React.Component {    
-    componentWillMount({...props}){
-        this.props.Joe()
+class Home extends React.Component {  
+
+    componentWillMount(){
+        this.props.statusChange();
     }
-    
+
     componentWillUnmount(){
-        this.props.Sam()
+        this.props.statusChange();
     }
 
     render(){

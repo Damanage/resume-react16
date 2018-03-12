@@ -23,15 +23,12 @@ class App extends Component {
       isMount: false
     }
 
-    this.Joe = this.Joe.bind(this);
-    this.Sam = this.Sam.bind(this)
+    this.statusChange = this.statusChange.bind(this)
   }
-  
-  Joe(){
-     this.setState({isMount: true})
-  }
-  Sam(){
-    this.setState({isMount: false})
+
+
+  statusChange(){
+    this.setState({isMount: !this.state.isMount});
   }
 
   render() {
@@ -47,7 +44,7 @@ class App extends Component {
           
             <CSSTransition in={!this.state.isMount} key={location.key} classNames='test' timeout={500}>
               
-              {!this.state.isMount ? <Header/>: <div></div>  }
+              {!this.state.isMount ? <Header/>:<div></div>  }
             </CSSTransition> 
           
           
@@ -58,7 +55,7 @@ class App extends Component {
 
                 <CSSTransition  key={location.key} classNames="fade" timeout={1400}>  
                   <Switch location={location}>
-                    <Route exact path='/home' render={()=><Home Sam={this.Sam} Joe={this.Joe}/>}/>
+                    <Route exact path='/home' render={()=><Home statusChange={this.statusChange}/>}/>
                     <Route exact path='/about' component={About}/>
                     <Route exact path='/portfolio' component={Portfolio}/>
                     <Route component={NotFound}/>
