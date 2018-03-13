@@ -1,14 +1,14 @@
 import React from 'react';
 import PortfolioItem from './PortfolioItem';
 import portfolioData from '../data/portfolioData.js';
-import SideNav from './SideNav'
-import {Route} from 'react-router-dom';
+// import SideNav from './SideNav'
+// import {Route} from 'react-router-dom';
 
 
 const Portfolio = (props) => {
     return(
         <div className="portfolio-page">
-            <Route path='/portfolio' component={SideNav}/>
+            {/* <Route path='/portfolio' component={SideNav}/> */}
 
             <div className="portfolio-wrp">
                 <div className="portfolio-item-list">
