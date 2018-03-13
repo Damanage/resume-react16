@@ -1,3 +1,14 @@
+@keyframes scale-machine
+    0%
+        width: 40%
+        
+    50%
+        width: 70%
+        
+    100%
+        width: 100%
+        
+
 .about-wrp
     position: absolute
     height: 100%
@@ -19,8 +30,22 @@
     min-width: 50%
     max-width: 80%
     min-height: 60%
+    height: 60%
     background-color: hsla(0, 11%, 53%, 0.69)
 
     display: flex
     flex-direction: column
     justify-content: center
+    align-items: center
+
+.tech-item
+    margin: 2px
+    min-height: 30%
+    background-color: grey
+    width: 40%
+    &:hover
+        color: red
+        animation: scale-machine 600ms ease-in
+        will-change: width
+        width: 100%
+
