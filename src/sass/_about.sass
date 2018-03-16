@@ -1,12 +1,29 @@
+
 @keyframes scale-machine
     0%
+        height: 60%
         width: 40%
         
     50%
-        width: 70%
+        width: 100%
+        height: 60%
         
     100%
         width: 100%
+        height: 100%
+
+@keyframes another-scale-machine
+    0%
+        width: 100%
+        height: 100%
+        
+    50%
+        width: 100%
+        height: 60%
+    100%
+        width: 40%
+        height: 60%
+        
         
 
 .about-wrp
@@ -25,6 +42,7 @@
     justify-content: center
 
 .about
+    position: relative
     color: #f5e8e8
     margin: 0 auto
     min-width: 50%
@@ -38,14 +56,18 @@
     justify-content: center
     align-items: center
 
-.tech-item
-    margin: 2px
-    min-height: 30%
-    background-color: grey
-    width: 40%
-    &:hover
-        color: red
-        animation: scale-machine 600ms ease-in
-        will-change: width
-        width: 100%
+    .tech-item
+        margin: 2px
+        min-height: 30%
+        background-color: grey
+        width: 40%
+       
+        will-change: width, height
+    
+    .tech-item-active
+        background-color: orange
+        
 
+.tech-item-caption
+    transform: scale(1.3)
+            
