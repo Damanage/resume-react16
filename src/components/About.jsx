@@ -16,8 +16,8 @@ class About extends React.Component {
     pogo(event){
         const target = event.target.classList;
         if(target[0] === 'tech-item'){
-            target.toggle('tech-item-active')
-        }
+            target.toggle('tech-item-active');
+        };
     }
 
     render(){
