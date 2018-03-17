@@ -16,13 +16,14 @@
     0%
         width: 100%
         height: 100%
-        
+
     50%
         width: 100%
         height: 60%
+        
     100%
-        width: 40%
         height: 60%
+        width: 40%
         
         
 
@@ -61,11 +62,19 @@
         min-height: 30%
         background-color: grey
         width: 40%
-       
+        animation: another-scale-machine 300ms
         will-change: width, height
     
     .tech-item-active
+        top: -2px
+        left: -2px
         background-color: orange
+        width: 100%
+        height: 100%
+        position: absolute
+        animation: scale-machine 300ms
+        will-change: width, height
+        z-index: 3
         
 
 .tech-item-caption

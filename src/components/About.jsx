@@ -5,11 +5,12 @@ import techData from '../data/tech-data.js';
 class About extends React.Component {
     constructor(props){
         super(props)
+        
+        this.state = {
+            frameIsOpen: false
+        }
 
         this.pogo = this.pogo.bind(this);
-    }
-    state = {
-        frameIsOpen: true
     }
 
 
@@ -17,7 +18,9 @@ class About extends React.Component {
         const target = event.target.classList;
         if(target[0] === 'tech-item'){
             target.toggle('tech-item-active');
+            this.setState({frameIsOpen: !this.state.frameIsOpen});
         };
+        
     }
 
     render(){
@@ -29,6 +32,7 @@ class About extends React.Component {
                             key={item.id} 
                             caption={item.caption} 
                             article={item.article}
+                            hiddenText={this.state.frameIsOpen && item.hiddenText}
                             pogo={this.pogo}
                             />
                             }
