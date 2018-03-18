@@ -18,6 +18,8 @@
     box-shadow: 9px 2px 19px -8px rgba(0,0,0,0.75)
     // background-image: linear-gradient(to top, #fac2c5, #ca9aaa, #98768e, #675570, #373650)
 
+    transition: border-left 400ms
+
 .header-menu
     width: 100%
     font-size: 20px
@@ -39,15 +41,41 @@
     span 
         width: 70%
         text-align: left
+
+.hdr-menu-1 
+    i 
+        color: #81abd7
+    &:hover
+        border-left: 5px solid #81abd7
+        
+.hdr-menu-2 
+    i 
+        color: #71b9cc
+    &:hover
+        border-left: 5px solid #71b9cc
+.hdr-menu-3 
+    i 
+        color: #6fcaca
+    &:hover
+        border-left: 5px solid #6fcaca
+.hdr-menu-4 
+    i 
+        color: #91dbdb
+    &:hover
+        border-left: 5px solid #91dbdb
     
+
 .header-menu:hover
-    background-color: black
+    background-color: #fdf6d6
     transition: background-color 400ms 
 
 .header-menu--active
-    color: red
-    border-left: 5px solid red
-    transition: border-left 400ms
+    color: #f37373
+    border-left: 5px solid #f37373
+    i 
+        color: #f37373
+    &:hover
+        border-left: 5px solid #f37373
 
 .test-enter
     transform: translateY(-100%)

@@ -8,10 +8,10 @@ class Header extends React.Component{
     render(){
         return(
             <div className='header-wrp'>
-                <ToolBarLink exact to='/home' className='header-menu' icon='home'>Home</ToolBarLink>
-                <ToolBarLink to='/about' className='header-menu' icon='person'>About</ToolBarLink>
-                <ToolBarLink to='/portfolio' className='header-menu' icon='insert_photo'>Portfolio</ToolBarLink>
-                
+                <ToolBarLink exact to='/home'  className='header-menu hdr-menu-1' icon='home'>Home</ToolBarLink>
+                <ToolBarLink to='/about'  className='header-menu hdr-menu-2' icon='person'>About</ToolBarLink>
+                <ToolBarLink to='/portfolio'  className='header-menu hdr-menu-3' icon='insert_photo'>Portfolio</ToolBarLink>
+                <ToolBarLink to='/contacts'  className='header-menu hdr-menu-4' icon='record_voice_over'>Contacts</ToolBarLink>
             </div>
         )
     }
