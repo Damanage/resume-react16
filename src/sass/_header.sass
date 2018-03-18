@@ -25,7 +25,18 @@
     color: gray
 
     margin: 10px
+    margin-left: 0px
     padding: 10px
+
+    transition: border-left 400ms
+    display: flex
+
+
+    i 
+        width: 30%
+    span 
+        width: 70%
+        text-align: left
     
 .header-menu:hover
     background-color: black
@@ -33,8 +44,8 @@
 
 .header-menu--active
     color: red
-    border-bottom: 1px solid rgb(72, 72, 79)
-    transition: border-bottom 1400ms
+    border-left: 5px solid red
+    transition: border-left 400ms
 
 .test-enter
     transform: translateY(-100%)

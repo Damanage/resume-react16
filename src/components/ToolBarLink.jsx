@@ -1,9 +1,12 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 
-const ToolBarLink = ({children, ...props}) => {
+const ToolBarLink = ({children, icon, ...props}) => {
     return(
-        <NavLink activeClassName='header-menu--active' {...props}>{children}</NavLink>
+        <NavLink activeClassName='header-menu--active' {...props}>
+            <i class="material-icons">{icon}</i>
+            <span>{children}</span> 
+        </NavLink>
     )
 }
 
