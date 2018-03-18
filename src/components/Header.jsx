@@ -12,6 +12,7 @@ class Header extends React.Component{
                 <ToolBarLink to='/about'  className='header-menu hdr-menu-2' icon='person'>About</ToolBarLink>
                 <ToolBarLink to='/portfolio'  className='header-menu hdr-menu-3' icon='insert_photo'>Portfolio</ToolBarLink>
                 <ToolBarLink to='/contacts'  className='header-menu hdr-menu-4' icon='record_voice_over'>Contacts</ToolBarLink>
+                <ToolBarLink to='/contacts'  className='header-menu hdr-menu-5' icon='content_paste'>Resume</ToolBarLink>
             </div>
         )
     }

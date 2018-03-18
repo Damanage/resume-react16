@@ -27,7 +27,7 @@ class About extends React.Component {
         return(
             <div className="about-wrp">
                 <div className="about-header">
-                    <span>About me</span>     
+                    <span>ABOUT ME</span>     
                 </div>
                 <div className="about">
                     {techData.map((item)=>{
