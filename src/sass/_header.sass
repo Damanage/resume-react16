@@ -1,6 +1,7 @@
 @import './media/header-media.sass'
     
 .header-wrp
+    overflow: hidden
     min-width: 10%
     width: 15%
     height: 100vh
@@ -14,10 +15,11 @@
     z-index: 2
     
     background: white
-
+    box-shadow: 9px 2px 19px -8px rgba(0,0,0,0.75)
     // background-image: linear-gradient(to top, #fac2c5, #ca9aaa, #98768e, #675570, #373650)
 
 .header-menu
+    width: 100%
     font-size: 20px
     font-weight: 600
     font-family: 'Roboto'
@@ -49,6 +51,7 @@
 
 .test-enter
     transform: translateY(-100%)
+
 .test-enter.test-enter-active
     transform: translateY(0%)
     transition: transform 300ms ease
