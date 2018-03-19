@@ -9,6 +9,8 @@ import Home from './components/Home';
 import Header from './components/Header';
 import About from './components/About';
 import Portfolio from './components/Portfolio';
+import Contacts from './pages/Contacts';
+import Resume from './pages/Resume';
 
 
 
@@ -58,6 +60,8 @@ class App extends Component {
                     <Route exact path='/home' render={()=><Home headerStatusChange={this.headerStatusChange}/>}/>
                     <Route exact path='/about' component={About}/>
                     <Route exact path='/portfolio' component={Portfolio}/>
+                    <Route exact path='/contacts' component={Contacts}/>
+                    <Route exact path='/resume' component={Resume}/>
                     <Route component={NotFound}/>
                   </Switch>
                 </CSSTransition>
