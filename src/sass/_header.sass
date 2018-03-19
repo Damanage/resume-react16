@@ -1,6 +1,7 @@
 @import './media/header-media.sass'
     
 .header-wrp
+    
     overflow: hidden
     min-width: 10%
     width: 15%
@@ -20,16 +21,18 @@
 
     transition: border-left 400ms
 .header-logo
-    height: 25%
+    
+    min-height: 35%
     display: flex
     flex-direction: column
-    justify-content: space-around
     &:after
-        height: 3px
-        background-color: yellow
+        
+        height: 1px
+        background-color: rgba(117, 111, 111, 0.65)
         width: 80%
         content: ' '
         margin: 0 auto
+        border-radius: 20%
     .logo
         border-radius: 100%
         margin-top: 10px 
@@ -40,7 +43,23 @@
         background-position: center
         background-repeat: no-repeat
         background-size: cover
-        
+    .logo-text
+        font-family: Roboto
+        text-align: left
+        padding: 1%
+        span 
+            margin-left: 15%
+            display: block
+            padding: 1%
+        &:last-child
+            color: #756f6f
+            
+            
+
+.name
+    color: #81abd7 
+    font-weight: bold
+    font-size: 1.6rem          
 
 .header-menu
     width: 100%
@@ -48,7 +67,7 @@
     font-weight: 600
     font-family: 'Roboto'
     text-decoration: none
-    color: gray
+    color: #756f6f
 
     
     padding: 15px

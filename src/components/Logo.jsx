@@ -8,7 +8,9 @@ const Logo = () => {
             
             </div>
             <div className="logo-text">
-                Maga Ovchetikov
+                <span className='name' >Dmitry</span>
+                <span className='name' >Chekunov</span>
+                <span>web-development</span>
             </div>
         </div>
     )
