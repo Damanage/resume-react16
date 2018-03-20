@@ -12,8 +12,6 @@ class HeaderMobile extends React.Component{
     menuShower(){
         const sideNav = document.querySelectorAll('.nav-mobile');
         sideNav[0].classList.toggle('nav-mobile-active');
-        console.log(sideNav[0].className);
-
     }
 
     render(){
