@@ -1,33 +1,56 @@
 @media only screen and (max-width: 600px)
+    
     .header-wrp
-        
+        overflow: visible
         width: 100%
-        height: auto
+        height: 9%
         flex-direction: row
-        .header-logo
-            flex-direction: row
-            width: 100%
-            justify-content: flex-start
-            i   
-                padding: 5%
-                display: flex
-                align-items: center
-            .logo-text
-                width: auto
-                span 
-                    display: block
-                    padding: 0
-                    margin: 0
-                .name
-                    display: inline-block
-                    padding-right: 5px
+        .header-sub-wrp
+            .header-logo
+                flex-direction: row
+                width: 100% 
+                justify-content: flex-start
+                .menu-icon
+                    flex: 1
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    i   
+                        min-width: 20px
+                        cursor: pointer
+                        padding: 5%
 
-        nav 
-            display: none
+                .logo-text
+                    flex: 5
+                    min-width: 30%
+                    span 
+                        display: block
+                        padding: 0
+                        margin: 0
+                    .name
+                        display: inline-block
+                        padding-right: 5px
 
+            nav 
+                padding-top: 30%
+                width: 40%
+                position: absolute
+                height: 100vh
+                background-color: white
 
-.header-logo:after
-    content: none
+    .nav-mobile
+        display: none
+    .nav-mobile-active
+        display: block
+
+// .header-wrp:active .nav-mobile
+//     display: block
+
+// .nav-mobile:hover
+//     display: block
+
+// .header-logo:after
+//     content: none
 /* Small devices (portrait tablets and large phones, 600px and up) */
 // @media only screen and (min-width: 600px) and (max-width: 750px)
     

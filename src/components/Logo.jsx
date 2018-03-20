@@ -1,12 +1,14 @@
 import React from 'react';
 // import logo from '../img/logo.jpg';
 
-const Logo = ({...props, width}) => {
+const Logo = ({...props, width, clickMachine}) => {
     return(
         <div className="header-logo">
             {   width<=600 
                 ? 
-                <i className="material-icons menu-icon" onClick={()=>console.log(width)}>menu</i> 
+                <div className="menu-icon">
+                    <i className="material-icons" onClick={clickMachine}>menu</i> 
+                </div>
                 :
                 <div className="logo">
                 </div>

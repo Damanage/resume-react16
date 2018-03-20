@@ -1,5 +1,4 @@
 .header-wrp
-    
     overflow: hidden
     min-width: 10%
     width: 15%
@@ -17,43 +16,45 @@
     box-shadow: 9px 2px 19px -8px rgba(0,0,0,0.75)
 
     transition: border-left 400ms
-
-.header-logo
     
+.header-sub-wrp
+    height: 100%
+    width: 100%
+
+.header-logo 
     min-height: 35%
     display: flex
     flex-direction: column
     justify-content: space-evenly
-    &:after
-        
-        height: 1px
-        background-color: rgba(117, 111, 111, 0.65)
-        width: 80%
-        content: ' '
-        margin: 0 auto
-        border-radius: 20%
-    .logo
-        border-radius: 100%
-        margin-top: 10px 
-        margin: 0 auto
-        height: 180px
-        width: 180px
-        background-image: url(./img/logo.jpg)
-        background-position: center
-        background-repeat: no-repeat
-        background-size: cover
-    .logo-text
-        font-family: Roboto
-        text-align: left
+.logo-text:after
+    height: 1px
+    background-color: rgba(117, 111, 111, 0.65)
+    width: 80%
+    content: ' '
+    margin: 0 auto
+    border-radius: 20%
+
+.logo-text
+    font-family: Roboto
+    text-align: left
+    padding: 1%
+    span 
+        margin-left: 15%
+        display: block
         padding: 1%
-        span 
-            margin-left: 15%
-            display: block
-            padding: 1%
-        &:last-child
-            color: hsla(0, 3%, 45%, 0.84)
+    &:last-child
+        color: hsla(0, 3%, 45%, 0.84)
             
-            
+.logo
+    border-radius: 100%
+    margin-top: 10px 
+    margin: 0 auto
+    height: 180px
+    width: 180px
+    background-image: url(./img/logo.jpg)
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover            
 
 .name
     color: #81abd7 
