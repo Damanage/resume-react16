@@ -31,17 +31,33 @@
                         display: inline-block
                         padding-right: 5px
 
-            nav 
-                padding-top: 30%
-                width: 40%
-                position: absolute
-                height: 100vh
-                background-color: white
-
+            .nav-mobile
+                height: 100%
+                .nav-wrapper 
+                    position: fixed
+                    left: 0
+                    top: 0
+                    z-index: 5
+                    padding-top: 15%
+                    width: 50%
+                    height: 100vh
+                    background-color: white
+                .nav-overlay
+                    top: 0
+                    left: 0
+                    position: absolute
+                    width: 100vh
+                    background-color: hsla(0, 0%, 6%, 0.62)
+                    height: 100vh
+                    z-index: 4
     .nav-mobile
-        display: none
+        transform: translateX(-200%)
+        transition: all 380ms
+        will-change: transform
     .nav-mobile-active
-        display: block
+        transform: translateX(0)
+        transition: all 380ms
+        will-change: transform
 
 // .header-wrp:active .nav-mobile
 //     display: block

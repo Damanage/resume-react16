@@ -8,7 +8,7 @@ const Portfolio = (props) => {
     return(
         <div className="portfolio-page">
            <div className="portfolio-header">
-                <span>HEADER</span>
+                <span>PROJECTS</span>
            </div> 
 
             <div className="portfolio-wrp">
