@@ -30,6 +30,10 @@
 }
 //animation
 
+.tr-group{
+  perspective: 500px
+}
+
 .fade-enter {
   transform: translateX(-150%);
   
@@ -41,12 +45,14 @@
   will-change: transform;
 }
 .fade-exit{
-  transform: translateX(0);
+  transform: translateX(0) rotateY(0);
+  transform-style: preserve-3d;
 }
 .fade-exit.fade-exit-active{
-  transform: translateX(150%);
+  transform: translateX(150%) rotateY(30deg);
   transition: transform 860ms ease-out;
   will-change: transform;
+  transform-style: preserve-3d;
 }
 
 
