@@ -60,6 +60,9 @@
         transition: all 380ms
         will-change: transform
 
+    .logo-text:after
+        display: none
+
 @media only screen and (min-width: 600px) and (max-width: 750px)
     .logo
         display: none
@@ -67,6 +70,13 @@
         width: 22%
         box-shadow: 2px -1px 20px -8px rgba(0, 0, 0, 0.75)
 
+    .header-sub-wrp
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    .logo-text:after
+        display: none
 
     .header-menu
         padding: 3px
