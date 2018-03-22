@@ -1,8 +1,8 @@
 import React from 'react';
-// import ToolBarLink from './ToolBarLink';
+
 import HeaderDesktop from './HeaderDesktop';
 import HeaderMobile from './HeaderMobile';
-// import Logo from './Logo';
+
 
 
 class Header extends React.Component{
