@@ -66,8 +66,8 @@ class App extends Component {
                     <Route exact path='/home' render={()=><Home headerStatusChange={this.headerStatusChange}/>}/>
                     <Route exact path='/about' render={()=><About aboutRender={this.aboutRender}/>}/>
                     <Route exact path='/portfolio' render={()=><Portfolio aboutRender={this.aboutRender}/>} />
-                    <Route exact path='/contacts' component={Contacts}/>
-                    <Route exact path='/resume' component={Resume}/>
+                    <Route exact path='/contacts' render={()=><Contacts aboutRender={this.aboutRender}/>} />
+                    <Route exact path='/resume' render={()=><Resume aboutRender={this.aboutRender}/>} />
                     <Route component={NotFound}/>
                   </Switch>
                 </CSSTransition>

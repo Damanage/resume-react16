@@ -23,8 +23,8 @@ class HeaderMobile extends React.Component{
                     </div>
 
                     <div className="logo-text">
-                        <span className='name' >Dmitry</span>
-                        <span className='name' >Chekunov</span>
+                        <span className='name' style={{color: this.props.textColor}}>Dmitry</span>
+                        <span className='name' style={{color: this.props.textColor}}>Chekunov</span>
                         <span>web-development</span>
                     </div>
 

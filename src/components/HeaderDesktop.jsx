@@ -1,15 +1,15 @@
 import React from 'react';
 import ToolBarLink from './ToolBarLink';
 
-const HeaderDesktop = () => {
+const HeaderDesktop = ({textColor, ...props}) => {
     return(
         <div className='header-sub-wrp'>
             <div className="header-logo">
                 <div className="logo"> </div>
 
                 <div className="logo-text">
-                    <span className='name' >Dmitry</span>
-                    <span className='name' >Chekunov</span>
+                    <span className='name' style={{color:textColor}} >Dmitry</span>
+                    <span className='name' style={{color:textColor}} >Chekunov</span>
                     <span>web-development</span>
                 </div>
             </div>
