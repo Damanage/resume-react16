@@ -11,21 +11,38 @@ class Header extends React.Component{
 
         this.state = {
             width: window.innerWidth,
-            
+            textColor: 'orange'  
         }
 
-        this.clickMachine = this.clickMachine.bind(this);
+        this.colorChangeMachine = this.colorChangeMachine.bind(this);
     }
+
     componentWillMount(){
         window.addEventListener('resize', this.windowWidthChange)
     }
     componentWillUnmount(){
         window.removeEventListener('resize', this.windowWidthChange)
     }
-
-    clickMachine(){
-        console.log('ha-ha-ah')
+    componentWillReceiveProps(nextProps){
+        this.colorChangeMachine(nextProps)
+        console.log(nextProps.currentUrl)
     }
+
+    colorChangeMachine(nextProps){
+        if(/about/.test(nextProps.currentUrl) === true){
+            this.colorPicker('.about-header');
+        }
+        else if(/portfolio/.test(nextProps.currentUrl) === true){
+            this.colorPicker('.portfolio-header');
+        }
+        
+    };
+
+    colorPicker(elemName){
+        let elem = document.querySelector(elemName);
+        let bgc = getComputedStyle(elem).backgroundColor;
+        this.setState({textColor: bgc});
+    };
 
     windowWidthChange = () => {
         this.setState({width: window.innerWidth})
@@ -33,7 +50,7 @@ class Header extends React.Component{
     
     render(){
         return(
-            <div className='header-wrp'>
+            <div className='header-wrp' style={{color: this.state.textColor}}>
                 {/* <Logo width={this.state.width} clickMachine={this.clickMachine}/>
                 <nav className='nav-mobile'>   
                     <ToolBarLink exact to='/home'  className='header-menu hdr-menu-1' icon='home'>Home</ToolBarLink>

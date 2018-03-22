@@ -22,15 +22,20 @@ class App extends Component {
     super(props)
 
     this.state = {
-      isMount: false
+      isMount: false,
+      currentUrl: window.location.href
     }
 
-    this.headerStatusChange = this.headerStatusChange.bind(this)
+    this.headerStatusChange = this.headerStatusChange.bind(this);
+    this.aboutRender = this.aboutRender.bind(this);
   }
 
 
   headerStatusChange(){
     this.setState({isMount: !this.state.isMount});
+  }
+  aboutRender(){
+    this.setState({currentUrl: window.location.href});
   }
 
   render() {
@@ -46,7 +51,8 @@ class App extends Component {
           
             <CSSTransition in={!this.state.isMount} key={location.key} classNames='test' timeout={500}>
               
-              {!this.state.isMount ? <Header/>:<div></div>  }
+              {!this.state.isMount ? <Header currentUrl={this.state.currentUrl}/>:<div></div>}
+
             </CSSTransition> 
           
           
@@ -58,8 +64,8 @@ class App extends Component {
                 <CSSTransition  key={location.key} classNames="fade" timeout={1400}>  
                   <Switch location={location}>
                     <Route exact path='/home' render={()=><Home headerStatusChange={this.headerStatusChange}/>}/>
-                    <Route exact path='/about' component={About}/>
-                    <Route exact path='/portfolio' component={Portfolio}/>
+                    <Route exact path='/about' render={()=><About aboutRender={this.aboutRender}/>}/>
+                    <Route exact path='/portfolio' render={()=><Portfolio aboutRender={this.aboutRender}/>} />
                     <Route exact path='/contacts' component={Contacts}/>
                     <Route exact path='/resume' component={Resume}/>
                     <Route component={NotFound}/>

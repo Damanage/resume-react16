@@ -7,12 +7,23 @@ class About extends React.Component {
         super(props)
         
         this.state = {
-            frameIsOpen: false
+            frameIsOpen: false,
+
         }
 
         this.pogo = this.pogo.bind(this);
     }
 
+    componentWillMount({...props}){
+        this.props.aboutRender()
+    }
+    componentWillUnmount(){
+        this.props.aboutRender()
+    }
+    // changinColor (){
+    //     const elem = document.querySelectorAll('span.name')[0]
+    //     console.log(elem)
+    // }
 
     pogo(event){
         const target = event.target.classList;
