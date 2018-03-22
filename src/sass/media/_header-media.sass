@@ -63,7 +63,7 @@
     .logo-text:after
         display: none
 
-@media only screen and (min-width: 600px) and (max-width: 750px)
+@media only screen and (min-width: 600px) and (max-width: 730px)
     .logo
         display: none
     .header-wrp
@@ -73,14 +73,36 @@
     .header-sub-wrp
         display: flex
         flex-direction: column
-        justify-content: center
+        justify-content: space-evenly
 
     .logo-text:after
         display: none
 
     .header-menu
-        padding: 3px
-        
+        padding: 6px
+
+@media only screen and (min-width: 730px) and (max-width: 850px)
+    .header-wrp
+        width: 22%
+        box-shadow: -3px -1px 18px 1px rgba(0, 0, 0, 0.75)
+
+    .header-logo
+        justify-content: flex-start
+    .logo
+        display: none
+
+    
+
+    .header-menu
+        font-size: 21px
+        padding: 16px
+        i
+            width: 25%
+
+// @media only screen and (min-width: 600px) and (max-width: 750px)
+//     .header-wrp
+//         background-color: yellow
+    
 
 // .header-wrp:active .nav-mobile
 //     display: block
@@ -91,7 +113,7 @@
 // .header-logo:after
 //     content: none
 /* Small devices (portrait tablets and large phones, 600px and up) */
-// @media only screen and (min-width: 600px) and (max-width: 750px)
+
     
 // /* Medium devices (landscape tablets, 768px and up) */
 // @media only screen and (min-width: 768px)
