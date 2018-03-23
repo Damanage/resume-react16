@@ -40,7 +40,8 @@ class About extends React.Component {
                     {techData.map((item)=>{
                         return <TechItem
                             key={item.id} 
-                            caption={item.caption} 
+                            caption={item.caption}
+                            data={item.skills}
                             />
                             }
                         )
