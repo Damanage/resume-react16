@@ -61,7 +61,7 @@ class App extends Component {
 
               <TransitionGroup className='tr-group'>
 
-                <CSSTransition  key={location.key} classNames="fade" timeout={1400}>  
+                <CSSTransition  key={location.key} classNames="fade" timeout={800}>  
                   <Switch location={location}>
                     <Route exact path='/home' render={()=><Home headerStatusChange={this.headerStatusChange}/>}/>
                     <Route exact path='/about' render={()=><About aboutRender={this.aboutRender}/>}/>

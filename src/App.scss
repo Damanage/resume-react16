@@ -41,7 +41,7 @@
 
 .fade-enter.fade-enter-active {
   transform: translateX(0);
-  transition: transform 900ms ease-out;
+  transition: transform 800ms ease-out;
   will-change: transform;
 }
 .fade-exit{
@@ -52,7 +52,7 @@
 .fade-exit.fade-exit-active{
   transform: translateX(150%) rotateY(30deg);
   // transition: transform 860ms ease-out;
-  animation: trdslide 960ms ease-out;
+  animation: trdslide 800ms ease-out;
   will-change: transform;
   transform-style: preserve-3d;
 }

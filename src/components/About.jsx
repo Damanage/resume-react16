@@ -41,8 +41,6 @@ class About extends React.Component {
                         return <TechItem
                             key={item.id} 
                             caption={item.caption} 
-                            article={item.article}
-                            
                             />
                             }
                         )
