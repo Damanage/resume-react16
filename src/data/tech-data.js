@@ -16,6 +16,12 @@ const techData = [
         caption: 'Other soft',
         article: 'other techs like os and some things',
         hiddenText: 'hidden text display here'
+    },
+    {   
+        id: 4,
+        caption: 'Other soft',
+        article: 'other techs like os and some things',
+        hiddenText: 'hidden text display here'
     }
 ]
 
