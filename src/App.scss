@@ -47,6 +47,7 @@
 .fade-exit{
   transform: translateX(0) rotateY(0);
   transform-style: preserve-3d;
+  will-change: transform;
 }
 .fade-exit.fade-exit-active{
   transform: translateX(150%) rotateY(30deg);
