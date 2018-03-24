@@ -10,7 +10,7 @@ class TechItem extends React.Component{
                 <h3 className='tech-item-title'>{this.props.caption}</h3>
                 <article className='tech-item-caption'>
                     <div className="skill-icon"> 
-                        {data !== undefined && data.map((item) => {return <TechLogo  url={item.img} skillName={item.name}/>})}
+                        {data !== undefined && data.map((item) => {return <TechLogo key={item.name} url={item.img} skillName={item.name}/>})}
                     </div>
                 </article>
             </div>
