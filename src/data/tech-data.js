@@ -1,8 +1,15 @@
-import css3 from '../img/css3.png'
-import sass from '../img/sass.png'
-import bootstrap from '../img/bootstrap.png'
-import foundation from '../img/yeti.png'
-import flexbox from '../img/flex-box.png'
+//css
+import css3 from '../img/css3.png';
+import sass from '../img/sass.png';
+import bootstrap from '../img/bootstrap.png';
+import foundation from '../img/yeti.png';
+import flexbox from '../img/flex-box.png';
+//js
+import jsLogo from '../img/js-logo.png';
+import reactLogo from '../img/react-icon.png';
+import reactRouterIcon from '../img/react-router.png';
+import webpackLogo from '../img/webpack.png';
+
 const techData = [
     {   
         id: 1,
@@ -37,12 +44,20 @@ const techData = [
         hiddenText: 'hidden text display here',
         skills: [
             {
-                img: css3,
-                name: "CSS3"
+                img: jsLogo,
+                name: "JS ES6"
             },
             {
-                img: css3,
-                name: "Penis"
+                img: webpackLogo,
+                name: "Webpack"
+            },
+            {
+                img: reactLogo,
+                name: "React JS"
+            },
+            {
+                img: reactRouterIcon,
+                name: 'React-Router'
             }
         ]
     },
