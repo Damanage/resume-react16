@@ -9,6 +9,7 @@ import foundation from '../img/yeti.png';
 import flexbox from '../img/flex-box.png';
 //js
 import jsLogo from '../img/js-logo.png';
+import babel from '../img/babel.png';
 import reactLogo from '../img/react-icon.png';
 import jqLogo from '../img/jquerry.png';
 import reactRouterIcon from '../img/react-router.png';
@@ -71,6 +72,10 @@ const techData = [
             {
                 img: jsLogo,
                 name: "JS ES6"
+            },
+            {
+                img: babel,
+                name: "Babel"
             },
             {
                 img: jqLogo,
