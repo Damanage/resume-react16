@@ -16,7 +16,7 @@ import reactRouterIcon from '../img/react-router.png';
 import webpackLogo from '../img/webpack.png';
 //other
 import psLogo from '../img/ps.png';
-import illustrator from '../img/illustartor1.png';
+import illustrator from '../img/illustartor.png';
 import gitLogo from '../img/git.png';
 import bower from '../img/bower.png';
 
