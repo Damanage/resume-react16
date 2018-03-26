@@ -1,8 +1,8 @@
 import React from 'react';
 
-const PortfolioItem = ({ imgAlt, caption, imgLink, ...props}) => {
+const PortfolioItem = ({ imgAlt, caption, imgLink, itemClass, ...props}) => {
     return(
-        <figure className="portfolio-item">
+        <figure className={itemClass}>
             <div className="img-wrp">
                 <img src={imgLink} alt={imgAlt}/>
             </div>
