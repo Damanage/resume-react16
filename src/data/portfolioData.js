@@ -2,22 +2,22 @@ const portfolioData = [
     {
         id: 1,
         url: '/img/duck.jpg',
-        caption: 'cap one'
+        caption: 'project one'
     },
     {
         id: 2,
         url: '/img/duck.jpg',
-        caption: 'cap two'
+        caption: 'project two'
     },
     {
         id: 3,
         url: '/img/duck.jpg',
-        caption: 'cap three'
+        caption: 'project three'
     },
     {
         id: 4,
         url: '/img/duck.jpg',
-        caption: 'cap four'
+        caption: 'project four'
     }
 ];
 
