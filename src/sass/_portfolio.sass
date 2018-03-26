@@ -27,7 +27,7 @@
     .portfolio-wrp
         min-width: 200px
         width: 100%
-        overflow: hidden
+        overflow: scroll
         flex: 4
         display: flex
         justify-content: center
@@ -35,20 +35,54 @@
 
 .portfolio-item-list
     
-    min-height: 80%
+    height: 100%
     display: flex
     justify-content: center
+    // flex-direction: column
     flex-wrap: wrap
-    align-content: space-around
-    max-width: 100%
+    // align-content: space-around
+    width: 80%
+    margin: 0 auto
     
     .portfolio-item
-        height: 50%
-        background-color: #a1919182
-        flex-basis: 39%
-        img
-            width: 150px
-            flex: 1
+        // background-color: #a1919182
+        width: 100%
+        height: 35%
+        position: relative
+        &:before
+            box-shadow: 9px 9px 20px -9px rgba(0,0,0,0.56)
+            position: absolute
+            top: 0
+            left: 10%
+            display: block
+            background-color: hsla(0, 0%, 82%, 0.68)
+            content: ' '
+            width: 56%
+            height: 100%   
+            z-index: -1
+        .img-wrp
+            box-shadow: 24px 16px 54px -9px rgba(0,0,0,0.67)
+            top: 5%
+            right: 0
+            position: absolute
+            width: 50%
+            height: 90%
+            overflow: hidden
+            img
+                vertical-align: middle
+                width: 100%
+                flex: 1
+                z-index: 3
+                // width: 52%
+        figcaption
+            box-shadow: 20px 18px 63px -9px rgba(0,0,0,0.67)
+            z-index: 1
+            width: 45%
+            height: 80%
+            top: 10% 
+            left: 9%
+            position: absolute
+            background-color: white
 
 //media
 @import './media/_portfolio-media.sass'
