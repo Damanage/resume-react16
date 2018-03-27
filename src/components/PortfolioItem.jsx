@@ -7,7 +7,11 @@ const PortfolioItem = ({ imgAlt, caption, imgLink, itemClass, ...props}) => {
                 <img src={imgLink} alt={imgAlt}/>
             </div>
             <figcaption>
-                {caption}
+                <h3>{caption}</h3>
+                <div className="caption-text">
+                    text caption
+                </div>
+                <a href="#">Live Demo</a>
             </figcaption>
         </figure>
     )

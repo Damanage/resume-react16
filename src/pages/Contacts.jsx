@@ -13,7 +13,20 @@ class Contacts extends React.Component{
                     <span>CONTACTS</span>
                 </div>
                 <div className="contacts">
-                    Contacts info must be here
+                    <div className="contact-list">
+                        <div className="contact-item">
+                            Git
+                        </div>
+                        <div className="contact-item">
+                            Post
+                        </div>
+                        <div className="contact-item">
+                            LinkenId
+                        </div>
+                        <div className="contact-item">
+                            phone
+                        </div>
+                    </div>
                 </div>    
             </div>  
         );
