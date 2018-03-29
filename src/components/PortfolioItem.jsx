@@ -11,7 +11,7 @@ const PortfolioItem = ({ imgAlt, caption, imgLink, itemClass, ...props}) => {
                 <div className="caption-text">
                     text caption
                 </div>
-                <a href="#">Live Demo</a>
+                <a href="https://damanage.github.io/Savanah-Digest-Page/" rel="noopener noreferrer" target='_blank'>Live Demo</a>
             </figcaption>
         </figure>
     )

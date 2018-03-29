@@ -95,6 +95,10 @@
                 font-weight: 600
                 width: 40%
                 margin: 0 auto
+                transition: color 200ms
+                &:hover
+                    transition: color 200ms
+                    color: #f37373
                     
     .first
         perspective: 800px
@@ -105,9 +109,10 @@
             top: 5%
             right: 0
             &:hover
+                vertical-align: middle
                 will-change: transform
                 transition-delay: 50ms
-                transform: rotateY(-10deg)
+                transform: rotateY(-5deg)
                 transition: all 300ms
         figcaption
             top: 10% 
@@ -121,9 +126,10 @@
             top: 5%
             left: 0
             &:hover
+                vertical-align: middle
                 will-change: transform
                 transition-delay: 50ms
-                transform: rotateY(10deg)
+                transform: rotateY(5deg)
                 transition: all 300ms
         figcaption
             top: 10% 
